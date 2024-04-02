@@ -2,49 +2,61 @@
 
 This document specifies how BackendRestAPI service used for user registration and login with registered users.
 
-**Endpoints**
+### Endpoints
 
-**Registration:**  
-Endpoint: ‘/addStudent’  
+**Registration:**
+
+**Endpoint:** ```/addStudent```
+
+```
 Method:POST  
 Description:Register a new user  
 RequestBody:
 {  
-"firstName": “uday”,  
-"lastname": "testing",  
-"gender": "male",  
-"phoneNumber": "3730127301",  
-"address1": "add1",  
-"city": "redmond",  
-"state": "wa",  
-"country": "usa",  
-"emailAddress": “uday@gmail.com",  
-"password": “uday”  
+    "firstName": “uday”,  
+    "lastname": "testing",  
+    "gender": "male",  
+    "phoneNumber": "3730127301",  
+    "address1": "add1",  
+    "city": "redmond",  
+    "state": "wa",  
+    "country": "usa",  
+    "emailAddress": “uday@gmail.com",  
+    "password": “uday”  
 }  
-Response:  
+```
+
+**Response:**
+```
 StatusCode: 200  
 ResponseBody:  
 {  
-Registration successful  
+  Registration successful  
 }
-
+```
 **Login:**  
+```
 Endpoint:’/login’  
 Method:POST  
 Description:Logging with existing user  
 RequestBody:  
 {  
-"emailAddress": “uday@gmail.com",  
-"password": “uday”  
-}  
-Response:  
+  "emailAddress": “uday@gmail.com",  
+  "password": “uday”  
+} 
+```
+
+**Response:**  
+````
 StatusCode: 200  
 ResponseBody:  
 {  
-True  
+  true  
 }
-
-
+````
 **Error Responses:**  
-400:User already registered  
-500:Server error
+- 400:User already registered  
+- 500:Server error
+
+
+![WebApp.jpg](WebApp.jpg)
